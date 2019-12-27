@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Financial | Chart.js</title>
+		<script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,String.prototype.repeat,Array.prototype.find,Array.prototype.findIndex,Math.trunc,Math.sign"></script>
+		<script src="https://cdn.jsdelivr.net/npm/luxon@1.19.3"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@0.2.0"></script>
+		<script src="./chartjs-chart-financial.js" type="text/javascript"></script>
+		<script src="./converter.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" href="./favicon.ico"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrap-left">
+				<h1 class="title-h1">Chart.js - Financial chart</h1>
+				<pre>_____________________¶¶¶
+____________________¶¶1¶¶
+_________________¶¶¶¶___¶¶¶¶
+___________________¶_____¶
+__________________¶¶¶111¶¶¶
+_________________¶¶¶¶¶¶¶¶¶¶¶
+_______________1¶¶11¶111111¶¶1
+______________¶¶¶111111111111¶¶
+____________¶¶¶111111111¶¶¶¶¶1¶¶¶
+__________1¶¶¶¶¶11111111¶1__1¶11¶¶¶
+_________¶¶¶¶1_1¶¶111111¶¶_1¶¶¶1¶¶¶¶
+___________¶¶__1¶¶1111111¶¶¶1¶¶¶
+___________¶¶¶¶¶111111111111111¶¶
+__________¶¶11¶¶1111111111111111¶¶¶
+________¶¶¶11111111111111111111111¶¶¶
+_______¶¶¶11111111111111111111¶11111¶¶1
+_____¶¶¶1111111111111111111111¶¶¶1111¶¶¶
+____¶¶¶¶¶1¶¶111111111111111¶¶¶1_1¶¶1¶¶¶¶¶1
+_________¶¶¶1111111111111111¶¶__1¶¶¶
+_______1¶¶111¶¶¶1111111111111¶¶¶¶¶1¶¶¶
+______¶¶¶11¶¶¶11¶¶¶11111111111¶111111¶¶1
+____¶¶¶1111¶¶1__1¶11111111111111111111¶¶¶
+__¶¶¶11111111¶¶¶¶¶1111111111111111111111¶¶¶
+1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶111111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+¶¶¶¶¶¶¶¶¶¶¶¶¶1¶¶¶1¶¶¶¶¶¶¶¶¶1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶1
+__________________1¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶¶
+__________________1¶¶¶¶¶¶¶¶
+__________________¶¶¶¶¶¶¶¶¶</pre>
+			</div>
+			<div class="wrap-right">
+				<h2 class="title">Sample Chart</h2>
+				<div style="width:1000px">
+					<canvas id="chart"></canvas>
+				</div>
+				<div>
+					Bar Type:
+					<select id="type">
+						<option value="candlestick" selected>Candlestick</option>
+						<option value="ohlc">OHLC</option>
+					</select>
+					Color Scheme:
+					<select id="color-scheme">
+						<option value="muted" selected>Muted</option>
+						<option value="neon">Neon</option>
+					</select>
+					Border:
+					<select id="border">
+						<option value="true" selected>Yes</option>
+						<option value="false">No</option>
+					</select>
+					<button id="update">Update</button>
+					<button id="randomizeData">Randomize Data</button>
+					<!--			<button id="marketData">Market Data</button>-->
+				</div>
+				<div style="margin-top: 2px">
+					Time-frame:
+					<select id="time-frame">
+						<option value="1min">1 min</option>
+						<option value="5min">5 min</option>
+						<option value="15min">15 min</option>
+						<option value="30min">30 min</option>
+						<option value="60min" selected>60 min</option>
+						<!--				<option value="5min"></option>-->
+					</select>
+					Stocks:
+					<select id="ticker">
+						<option value="GOOGL" selected>Google</option>
+						<option value="FB">Facebook</option>
+						<option value="AAPL">Apple</option>
+						<option value="AMZN">Amazon</option>
+						<option value="APA">Apache</option>
+						<option value="DBX">Dropbox</option>
+					</select>
+					<button id="marketData">Market Data</button>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
