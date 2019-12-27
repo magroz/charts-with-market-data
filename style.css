@@ -18,3 +18,7 @@ h2 {
 .wrap-right {
 	flex-grow: 1;
 }
+
+.title-h1 {
+	text-indent: 15%;
+}
